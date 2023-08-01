@@ -27,6 +27,8 @@ function formatTime(totalSeconds) {
     };
   
     const handleAddClick = () => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+
       if (name.trim() !== '' && time.trim() !== '') {
         let totalSeconds;
         if (time.includes(':')) {
@@ -46,6 +48,8 @@ function formatTime(totalSeconds) {
       const updatedList = [...list];
       updatedList.splice(index, 1);
       setList(updatedList);
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+
     };
 
     const navClassName = list.length > 0 ? 'has-items' : '';
