@@ -77,11 +77,11 @@ h2 {
 .wave {
     margin-bottom: -4px;
     margin-top: 100px;
-    transition: .5s;
+    transition: .4s;
 }
 
 #svg-move {
-    margin-top: -481px;
+    margin-top: -525px;
 }
 
 .animated-list h2 {
@@ -133,18 +133,18 @@ h2 {
 
   @media screen and (max-width: 800px) {
     #svg-move {
-        margin-top: -300px;
+        margin-top: -361px;
     }
   }
 
   @media screen and (max-width: 600px) {
     #svg-move {
-        margin-top: -259px;
+        margin-top: -337px;
     }
   }
 
   @media screen and (max-width: 500px) {
     #svg-move {
-        margin-top: -240px;
+        margin-top: -269px;
     }
   }

@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import Nav from './nav';
 import './addPerson.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMinusCircle } from '@fortawesome/free-solid-svg-icons'
+import { faMinusCircle } from '@fortawesome/free-solid-svg-icons';
+
 
 
 function formatTime(totalSeconds) {
@@ -17,6 +18,8 @@ function formatTime(totalSeconds) {
     const [list, setList] = useState([]);
     const [sortedList, setSortedList] = useState([]);
     const prevListLengthRef = useRef(0);
+
+    
   
     const handleNameChange = (event) => {
       setName(event.target.value);
@@ -57,9 +60,12 @@ function formatTime(totalSeconds) {
     const helpText2 = list.length === 0 ? 'Enter a name and a time below to add to list' : '';
 
 
+    
+
   useEffect(() => {
     const sortedList = [...list].sort((a, b) => a.time - b.time); // Sort in ascending order
     setSortedList(sortedList);
+
 
     // Determine if a new time has taken the number 1 spot
     if (prevListLengthRef.current < sortedList.length && sortedList.length > 0) {
@@ -71,7 +77,8 @@ function formatTime(totalSeconds) {
         setTimeout(() => firstItem.classList.remove('new-time-added'), 500);
       }
     }
- 
+
+  
     prevListLengthRef.current = sortedList.length;
   }, [list]);
 
